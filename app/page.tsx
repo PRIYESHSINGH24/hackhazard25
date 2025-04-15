@@ -33,7 +33,7 @@ export default function Home() {
       <div className="max-w-5xl w-full z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-coder-primary via-coder-accent to-coder-secondary bg-clip-text text-transparent animate-text-shimmer">
-            Food Expiry Tracker
+            FreshTrack AI
           </h1>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             Scan, track, and get recipe suggestions for your food items before they expire
