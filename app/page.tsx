@@ -33,73 +33,72 @@ export default function Home() {
       <div className="max-w-5xl w-full z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-coder-primary via-coder-accent to-coder-secondary bg-clip-text text-transparent animate-text-shimmer">
-            Food Expiry Tracker
+            FreshTrack AI
           </h1>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             Scan, track, and get recipe suggestions for your food items before they expire
           </p>
         </motion.div>
-
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+>
+  <Card className="border border-coder-primary/20 bg-card/80 backdrop-blur-sm overflow-hidden relative">
+    <div className="absolute inset-0 bg-gradient-to-br from-coder-primary/10 to-transparent pointer-events-none"></div>
+    <CardHeader>
+      <ScanLine className="h-8 w-8 mb-2 text-coder-primary" />
+      <CardTitle className="text-coder-primary">Scan Products</CardTitle>
+      <CardDescription>Scan expiry dates with your camera</CardDescription>
+    </CardHeader>
+    <CardFooter>
+      <Link href="/scan" className="w-full">
+        <Button className="w-full bg-coder-primary hover:bg-coder-primary/80 text-black">
+          Scan Now <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </Link>
+    </CardFooter>
+  </Card>
+
+  <Card className="border border-coder-accent/20 bg-card/80 backdrop-blur-sm overflow-hidden relative">
+    <div className="absolute inset-0 bg-gradient-to-br from-coder-accent/10 to-transparent pointer-events-none"></div>
+    <CardHeader>
+      <Calendar className="h-8 w-8 mb-2 text-coder-accent" />
+      <CardTitle className="text-coder-accent">Track Expiry</CardTitle>
+      <CardDescription>Get reminders before your food expires</CardDescription>
+    </CardHeader>
+    <CardFooter>
+      <Link href="/inventory" className="w-full">
+        <Button
+          variant="outline"
+          className="w-full border-coder-accent/50 text-coder-accent hover:bg-coder-accent/10"
         >
-          <Card className="border border-coder-primary/20 bg-card/80 backdrop-blur-sm overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-coder-primary/10 to-transparent"></div>
-            <CardHeader>
-              <ScanLine className="h-8 w-8 mb-2 text-coder-primary" />
-              <CardTitle className="text-coder-primary">Scan Products</CardTitle>
-              <CardDescription>Scan expiry dates with your camera</CardDescription>
-            </CardHeader>
-            <CardFooter>
-              <Link href="/scan" className="w-full">
-                <Button className="w-full bg-coder-primary hover:bg-coder-primary/80 text-black">
-                  Scan Now <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
+          View Inventory <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </Link>
+    </CardFooter>
+  </Card>
 
-          <Card className="border border-coder-accent/20 bg-card/80 backdrop-blur-sm overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-coder-accent/10 to-transparent"></div>
-            <CardHeader>
-              <Calendar className="h-8 w-8 mb-2 text-coder-accent" />
-              <CardTitle className="text-coder-accent">Track Expiry</CardTitle>
-              <CardDescription>Get reminders before your food expires</CardDescription>
-            </CardHeader>
-            <CardFooter>
-              <Link href="/inventory" className="w-full">
-                <Button
-                  variant="outline"
-                  className="w-full border-coder-accent/50 text-coder-accent hover:bg-coder-accent/10"
-                >
-                  View Inventory <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
-
-          <Card className="border border-coder-secondary/20 bg-card/80 backdrop-blur-sm overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-coder-secondary/10 to-transparent"></div>
-            <CardHeader>
-              <ChefHat className="h-8 w-8 mb-2 text-coder-secondary" />
-              <CardTitle className="text-coder-secondary">Recipe Suggestions</CardTitle>
-              <CardDescription>Get AI-powered recipe ideas based on your ingredients</CardDescription>
-            </CardHeader>
-            <CardFooter>
-              <Link href="/recipes" className="w-full">
-                <Button
-                  variant="outline"
-                  className="w-full border-coder-secondary/50 text-coder-secondary hover:bg-coder-secondary/10"
-                >
-                  View Recipes <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
-        </motion.div>
+  <Card className="border border-coder-secondary/20 bg-card/80 backdrop-blur-sm overflow-hidden relative">
+    <div className="absolute inset-0 bg-gradient-to-br from-coder-secondary/10 to-transparent pointer-events-none"></div>
+    <CardHeader>
+      <ChefHat className="h-8 w-8 mb-2 text-coder-secondary" />
+      <CardTitle className="text-coder-secondary">Recipe Suggestions</CardTitle>
+      <CardDescription>Get AI-powered recipe ideas based on your ingredients</CardDescription>
+    </CardHeader>
+    <CardFooter>
+      <Link href="/recipes" className="w-full">
+        <Button
+          variant="outline"
+          className="w-full border-coder-secondary/50 text-coder-secondary hover:bg-coder-secondary/10"
+        >
+          View Recipes <ArrowRight className="ml-2 h-4 w-4" />
+        </Button>
+      </Link>
+    </CardFooter>
+  </Card>
+</motion.div>
 
         {!isAuthenticated && (
           <motion.div

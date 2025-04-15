@@ -83,7 +83,7 @@ export default function Navbar() {
               <Code className="h-6 w-6" />
             </motion.div>
             <span className="font-bold text-xl bg-gradient-to-r from-coder-primary to-coder-accent bg-clip-text text-transparent">
-              FoodTracker
+              FreshTrack AI
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
