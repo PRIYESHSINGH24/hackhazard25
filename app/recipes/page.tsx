@@ -12,10 +12,10 @@ import { motion } from "framer-motion"
 
 // Sample recipe images
 const recipeImages = [
-  "/placeholder.svg?height=200&width=400&text=Chicken+Salad",
-  "/placeholder.svg?height=200&width=400&text=Smoothie",
-  "/placeholder.svg?height=200&width=400&text=Sandwich",
-  "/placeholder.svg?height=200&width=400&text=Pasta",
+  "/Grilled-Chicken-and-Spinach-Salad.jpeg",
+  "/Banana-Spinach-Smoothie-5.jpg",
+  "/grilled-chicken-sandwich-recipe.jpg",
+  "/vegan-spinach-pasta-sauce-featured-500x500.jpg",
   "/placeholder.svg?height=200&width=400&text=Soup",
   "/placeholder.svg?height=200&width=400&text=Stir+Fry",
 ]
